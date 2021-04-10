@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :movie_api, MovieApiWeb.Endpoint,
-  url: [host: "my-movie-network.normalwebsite.art", port: 80],
+  url: [host: "my-movie-network.normalwebsite.art", port: 80]
 
 # Do not print debug messages in production
 config :logger, level: :info
