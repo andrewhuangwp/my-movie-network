@@ -276,6 +276,10 @@ export function get_room(room) {
   return api_get("/rooms/" + room);
 }
 
+export function get_movies() {
+  return api_get("/movies");
+}
+
 
 
 export function load_defaults() {

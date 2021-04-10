@@ -8,9 +8,9 @@ defmodule MovieApiWeb.StatisticController do
 
   def show(conn, _params) do
     movies = Movies.list_movies()
-    likes = Likes.list_likes()
-    comments = Comments.list_comments()
-    result = %{movies: movies, likes: likes, comments: comments}
+    #likes = Likes.list_likes()
+    #comments = Comments.list_comments()
+    result = %{movies: movies}
     conn
     |> put_resp_header("content-type", "application/json; charset=UTF-8")
     |> send_resp(:created, Jason.encode!(%{"result" => result}))

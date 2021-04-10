@@ -18,7 +18,7 @@ defmodule MovieApi.Movies do
 
   """
   def list_movies do
-    Repo.all(Movie) |> Repo.preload(:list)
+    Repo.all(Movie) |> Repo.preload(:list) |> Repo.preload(list: :user) |> Repo.preload(list: :movies)
   end
 
   @doc """
