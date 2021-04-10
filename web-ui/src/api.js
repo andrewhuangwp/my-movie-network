@@ -1,6 +1,6 @@
 import store from './store';
 
-const url = "http://localhost:4000/api/v1";
+const url = "http://my-movie-network.normalwebsite.art/api/v1";
 
 async function api_get(path) {
   let text = await fetch(url + path, {});

@@ -10,11 +10,17 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :movie_api, MovieApiWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "my-movie-network.normalwebsite.art", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
 config :logger, level: :info
+
+config :cors_plug,
+  origin: ["http://my-movie-network.normalwebsite.art"],
+  max_age: 86400,
+  methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
+  headers: ["x-auth", "content-type"]
 
 # ## SSL Support
 #

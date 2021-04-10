@@ -1,0 +1,15 @@
+[Unit]
+Description=My Movie Network
+
+[Service]
+Type=simple
+User=movie
+Group=movie
+Restart=on-failure
+Environment=LANG=en_US.UTF-8
+
+WorkingDirectory=/home/movie/my-movie-network/server
+ExecStart=/bin/bash /home/movie/my-movie-network/server/start.sh
+
+[Install]
+WantedBy=multi-user.target
