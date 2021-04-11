@@ -32,7 +32,7 @@ The application is significantly more complex than previous projects (a lot more
 There were some interesting details that were interesting to implement. For instance, the API I was using would only return the first page of the result I was looking for, so I had to paginate the component that used this external API.
 * What’s the complex part of your app? How did you design that component and why?
 
-The most complex part of my app was not one component but the flow of data in general. Since I had so many resources/tables I had to design components and the API to ensure I had all the data that the component depended on.
+The most complex part of my app was the show list component as I had to send a get request to the external API to find movie data and be able to add or remove movies from list all in one component. In addition, the result I got from the API was paginated so I had to create my own pagination logic to send requests based on pages as well.
 * What was the most significant challenge you encountered and how did you solve it?
 
 The most significant challenge was organizing the backend. There were so many times I came across the Association Not Loaded error because I had to make sure for each view of the resource that I had preloaded the dependencies in another file. Creating chat rooms was also difficult as I didn't use channels in a SPA for homework before so it was a little tricky getting the chat room to work properly.
